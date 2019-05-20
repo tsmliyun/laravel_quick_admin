@@ -1,0 +1,46 @@
+
+/* 外面盒子样式---自己定义 */
+.pagination {
+    margin: 20px 10px 20px 0;
+    color: #666
+}
+
+/* 页数按钮样式 */
+.pagination li {
+    display: inline-block;
+    min-width: 30px;
+    height: 28px;
+    cursor: pointer;
+    color: #666;
+    font-size: 13px;
+    line-height: 28px;
+    background-color: #f9f9f9;
+    border: 1px solid #dce0e0;
+    text-align: center;
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.pagination li a {
+    display:block;
+    width:100%;
+    text-decoration: none;
+}
+
+.pagination .active {
+    background-color: #0073A9;
+    border-color: #0073A9;
+    color: #FFF
+}
+
+/*button禁用*/
+.pagination disabled {
+    opacity: .5;
+    cursor: no-drop
+}
+
+.search_p {
+    margin-right: 5px;
+}
