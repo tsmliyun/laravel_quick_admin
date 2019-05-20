@@ -23,7 +23,7 @@
 - model
 - log
 - request
-- Repository  (关于这个仁者见仁智者见智吧)
+- Repository  (关于这个仁者见仁智者见智吧,本项目弃用repository设计模式)
 
 ## 项目搭建
 
