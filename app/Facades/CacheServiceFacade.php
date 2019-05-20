@@ -20,6 +20,6 @@ class CacheServiceFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'lmcacheservice';
+        return 'cacheservice';
     }
 }

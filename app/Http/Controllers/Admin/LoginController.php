@@ -43,13 +43,13 @@ class LoginController extends BaseController
     /**
      * Create a new controller instance.
      *
-     * @param UserService $LMUserService
+     * @param UserService $userService
      * @return void
      */
-    public function __construct(UserService $LMUserService)
+    public function __construct(UserService $userService)
     {
         $this->middleware('guest')->except('logout');
-        $this->userService = $LMUserService;
+        $this->userService = $userService;
     }
 
     /**

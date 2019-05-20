@@ -24,7 +24,7 @@ class CacheServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('lmcacheservice', function() {
+        $this->app->singleton('cacheservice', function() {
             return new CacheService();
         });
     }

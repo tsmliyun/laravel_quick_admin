@@ -27,9 +27,11 @@
 
 ## 项目搭建
 
-比较简单，就正常的laravel项目部署，`composer install`即可。
+比较简单，主要以下几步
 
-注意修改`.env`文件相关配置（数据库，redis等常规配置信息）。
+1. `composer install`
+2. 修改`.env`文件相关配置
+3. 执行`laravel_quick_admin/laravel_quick_admin.sql`文件中的sql语句
 
 ## 展望
 

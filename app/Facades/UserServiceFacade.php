@@ -20,7 +20,7 @@ class UserServiceFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'lmuserservice';
+        return 'userservice';
     }
 
 }

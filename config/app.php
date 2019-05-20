@@ -182,7 +182,6 @@ return [
         \App\Providers\CacheServiceProvider::class,
         \App\Providers\MailServiceProvider::class,
         \App\Providers\UserServiceProvider::class,
-        \App\Providers\LMCouponServiceProvider::class
     ],
 
     /*
@@ -239,7 +238,6 @@ return [
         'CacheService'  => \App\Facades\CacheServiceFacade::class,
         'MailService'   => \App\Facades\MailServiceFacade::class,
         'UserService'   => \App\Facades\UserServiceFacade::class,
-        'LMCouponService' => \App\Facades\LMCouponServiceFacade::class,
     ],
 
 ];

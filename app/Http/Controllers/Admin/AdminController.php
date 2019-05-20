@@ -36,10 +36,10 @@ class AdminController extends BaseController
      */
     private $lmRoleService;
 
-    public function __construct(UserService $userService, RoleService $LMRoleService)
+    public function __construct(UserService $userService, RoleService $roleService)
     {
         $this->userService = $userService;
-        $this->lmRoleService = $LMRoleService;
+        $this->lmRoleService = $roleService;
     }
 
     /**
