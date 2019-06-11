@@ -32,6 +32,10 @@
 1. `composer install`
 2. 修改`.env`文件相关配置
 3. 执行`laravel_quick_admin/laravel_quick_admin.sql`文件中的sql语句
+4. 登陆信息：账号：1234@qq.com  密码：1234
+
+## 注意点
+因为博主用的数据库是mariadb，创建时间和更新时间的默认值为current_timestamp(),如果你是mysql的话，应该修改为CURRENT_TIMESTAMP 
 
 ## 展望
 
