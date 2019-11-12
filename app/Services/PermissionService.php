@@ -87,15 +87,11 @@ class PermissionService
         // 当前登录用户信息
         $userInfo = UserService::getUserInfo();
         // 当前用户所属角色拥有的权限
-        $userPermissions = [];
+        $permissionArr = [];
         if (!empty($userInfo->userRole)) {
-            foreach ($userInfo->userRole as $value) {
-                if (empty($value->rolePermissions)) {
-                    continue;
-                }
-                foreach ($value->rolePermissions as $item) {
-                    $userPermissions[] = $item->permission_id;
-                }
+            $userPermissions = $userInfo->userRole->rolePermissions;
+            foreach ($userPermissions as $item) {
+                $permissionArr[] = $item->permission_id;
             }
         }
 
@@ -110,10 +106,12 @@ class PermissionService
             'sort',
             'status'
         ];
+
         $result = CrmAdminPermissionModel::where('is_menu', '=', 1)
             ->where('status', '=', 1);
-        if (!empty($userPermissions)) {
-            $result->whereIn('id', $userPermissions);
+
+        if ($userInfo->userRole->role_id != 1 && !empty($permissionArr) ) {
+            $result->whereIn('id', $permissionArr);
         }
         $result = $result->orderBy('sort')
             ->get($columns)

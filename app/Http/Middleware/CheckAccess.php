@@ -27,10 +27,15 @@ class CheckAccess
         // 当前用户所属角色拥有的权限
         $userPermissions = [];
         if (!empty($userInfo->userRole)) {
+            // 超级管理员拥有至高无上的权限
+            if ($userInfo->userRole->role_id == 1) {
+                return $next($request);
+            }
             foreach ($userInfo->userRole->rolePermissions as $item) {
                 $userPermissions[] = $item->permission_id;
             }
         }
+
         if (!empty($userPermissions)) {
             // 查看访问的路由的信息
             $uri     = $request->route()->uri();
@@ -48,6 +53,5 @@ class CheckAccess
                 'message' => trans('common.request_forbidden'),
             ],
         ]);
-
     }
 }
